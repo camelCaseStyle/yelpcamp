@@ -15,9 +15,9 @@ var campgroundRoutes = require("./routes/campgrounds"),
     commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
 
-var PORT = process.env.PORT,
-    IP = process.env.IP,
-    DATABASEURL = process.DATABASE_URL || "mongodb://localhost:27017/yelp_camp";
+var PORT = process.env.PORT || "3000",
+    IP = process.env.IP || "127.0.0.1",
+    DATABASEURL = process.env.DATABASE_URL || "mongodb://localhost:27017/yelp_camp";
 
 
 //seedDB();    
@@ -31,7 +31,7 @@ mongoose.connect(DATABASEURL, { useNewUrlParser: true });
 
 //PASSPORT CONFIG 
 app.use(require("express-session")({
-    secret: "james",
+    secret: process.env.PASSPORT_SECRET,
     resave: false,
     saveUninitialized: false
 }));
