@@ -1,0 +1,33 @@
+.thumbnail img{
+    width: 100%;
+}
+.thumbnail{
+    padding: 0;
+}
+
+.thumbnail .caption-full{
+    padding: 9px;
+}
+.username{
+    padding: 15px 0 15px 0;
+    color: rebeccapurple;
+}
+#deleteForm{
+ display: inline;
+}
+.hoverEffect:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+#headingSpacing{
+    padding-bottom: 2vw;
+}
+
+#loginPage{
+    z-index: 10;
+    margin: 20vh auto;
+    width: 30vw;
+    
+}
+
+
