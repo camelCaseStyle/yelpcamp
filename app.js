@@ -49,7 +49,7 @@ passport.deserializeUser(User.deserializeUser());
 var PORT = "3000";
 var IP = "127.0.0.1";
 
-app.listen(PORT, IP, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The server is up!");
 });
 
