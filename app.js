@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(flash());
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
-mongoose.connect("mongodb://localhost:27017/yelp_camp", { useNewUrlParser: true });
+mongoose.connect("mongodb://anubhav.ashish:jamBread22@ds159497.mlab.com:59497/yelpcampanubhav", { useNewUrlParser: true });
 
 //PASSPORT CONFIG 
 app.use(require("express-session")({
@@ -46,8 +46,8 @@ passport.deserializeUser(User.deserializeUser());
 
 
 
-var PORT = "3000";
-var IP = "127.0.0.1";
+var PORT = process.env.PORT ||"3000";
+var IP = process.env.IP || "127.0.0.1";
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The server is up!");
